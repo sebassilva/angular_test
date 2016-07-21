@@ -44,9 +44,8 @@ position:absolute;
 
 }
 .delBtn{
-	display: none;
 	position:relative;
-	top:-25px;
+	top:-47px;
 }
 .listItemName{
 	width:10pc;

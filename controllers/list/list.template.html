@@ -1,7 +1,15 @@
-<div class="col-md-6 col-md-offset-3">
+<div class="col-md-8 col-md-offset-2">
+	<div class="list-group">
+	<a class='list-group-item'><h2>Agregar un producto</h2>
+	<input type="text" ng-model="newProductName">
+		<button class="btn btn-success pull-right " ng-click = "addProduct()">Agregar</button>	
+	</a>
+	</div>
+</div>
+<div class="col-md-6 col-md-offset-2">
 	<div class="list-group">
 	<a class='list-group-item' id = 'productTitle' ng-repeat = "product in products"><h2>{{product.name}}</h2>
-		<button class="btn btn-danger pull-right" ng-click = "deleteProduct(product.id)">Eliminar</button>	
+		<button class="btn btn-danger pull-right delBtn"  ng-hide = "shouldDisplay" ng-click = "deleteProduct(product.id)">Eliminar</button>	
 	</a>
 	  <div id="productList"></div>
 	</div>
