@@ -14,7 +14,6 @@ angular
 		  product = $scope.products[a]
 		  if (product.id == id){
 		    $scope.products.splice(a,1)
-		    console.log("SE ELIMMINO A LA VERGA" + a)
 		  }
 		}
 	}
