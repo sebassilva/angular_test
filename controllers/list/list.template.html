@@ -1,0 +1,8 @@
+<div class="col-md-6 col-md-offset-3">
+	<div class="list-group">
+	<a class='list-group-item' id = 'productTitle' ng-repeat = "product in products"><h2>{{product.name}}</h2>
+		<button class="btn btn-danger pull-right" ng-click = "deleteProduct(product.id)">Eliminar</button>	
+	</a>
+	  <div id="productList"></div>
+	</div>
+</div>

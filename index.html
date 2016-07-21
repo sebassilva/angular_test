@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" ng-app = "app">
+  <head>
+    <meta charset="utf-8">
+    <title>My HTML File</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="controllers/login/login.controller.js"></script>
+    <script src="controllers/list/list.controller.js"></script>
+    <script src="config.js"></script>
+    <script src="services/requestService.js"></script>
+  </head>
+  <body>
+  	<div class="container">
+		<div class="row">
+ 			 <ui-view></ui-view>
+ 		</div>
+ 	</div>
+  </body>
+</html>
