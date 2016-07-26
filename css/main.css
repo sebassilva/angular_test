@@ -74,3 +74,16 @@ position:absolute;
 	position: absolute;
 	top:40%;
 }
+
+.notification{
+	top:0px;
+	left:0px;
+	right: 0px;
+	margin:auto;
+	position:fixed;
+	height:30px;
+	width:250px;
+	background-color:green;
+	color:white;
+	z-index: 1;
+}
