@@ -1,19 +1,19 @@
 angular
 .module('app')
-.controller('listController', ['$scope', '$location', 'requestService', 'myConfig', 'notificationCenter', 
-	function($scope, $location, requestService, myConfig, notificationCenter){
+.controller('listController', ['$scope', '$location', 'requestService', 'myConfig', 'notificationCenter', 'auth', '$sessionStorage',
+	function($scope, $location, requestService, myConfig, notificationCenter, auth, $sessionStorage){
 
 
 
 	$scope.loadProducts = function (){
 		$scope.products = []
-		requestService.request('GET', '', myConfig.getAllUrl + myConfig.token, finished)
+		requestService.request('GET', '', myConfig.getAllUrl + $sessionStorage.token, finished)
 	}
 
 
 
 	$scope.deleteProduct = function(id){
-		let url = myConfig.getProductUrl +'/'+ id + '/?token=' + myConfig.token
+		let url = myConfig.getProductUrl +'/'+ id + '/?token=' + $sessionStorage.token
 		let request = requestService.request('DELETE', '', url, deleteProduct)
 		for (a = 0; a < $scope.products.length; a++){
 		  product = $scope.products[a]
@@ -31,7 +31,7 @@ angular
 
 
 	function addProduct(data){
-		requestService.request('GET', '', myConfig.getAllUrl + myConfig.token, finished)
+		requestService.request('GET', '', myConfig.getAllUrl + $sessionStorage.token, finished)
 	}
 
 	function deleteProduct(data){
@@ -42,8 +42,7 @@ angular
 		$scope.products = data.products
 		$scope.$apply()
 	}
-
-	$scope.loadProducts()
+		auth.checkIfAuth()
+		$scope.loadProducts()
 
 }])
-

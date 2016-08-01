@@ -1,5 +1,5 @@
 angular.module('app', ['ui.router'])
-	.config(['$urlRouterProvider', '$stateProvider', 'ngstorage', function($urlRouterProvider, $stateProvider, ngstorage){
+	.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider){
 		$urlRouterProvider.otherwise('/')
 
 		$stateProvider.state('login', {
